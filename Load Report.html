@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>Load Report</title>
+</head>
+<body>
+
+
+
+
+
+<br><br><br><br>
+<p style="text-align: left;"><span style="font-family: 
+Arial, Helvetica, sans-serif;"><span style="font-size: 26px;"></span><span style="font-size: 36px; "><strong>
+Load Test Report
+</strong></span>
+<br><br>
+<p style="text-align: left;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 26px;">
+Minimum Users Analyzed: 5
+</span></p>
+<p style="text-align: left;"><span style="font-size: 
+      26px;"><span style="font-family: 
+        Arial, Helvetica, sans-serif;">
+Maximum Users Analyzed: 15
+    </span></span></p>
+<p style="text-align: left;"><span style="font-size: 
+      26px;"><span style="font-family: 
+        Arial, Helvetica, sans-serif;"><strong>Performance Goals:</strong></span></span></p>
+<p style="text-align: left;"><span style="font-size: 
+      26px;"><span style="font-family: 
+        Arial, Helvetica, sans-serif;">
+5 Users - All goals passed</span></span></p>
+<p style="text-align: left;"><span style="font-size: 
+      26px;"><span style="font-family: 
+        Arial, Helvetica, sans-serif;">
+10 Users - All goals passed</span></span></p>
+<p style="text-align: left;"><span style="font-size: 
+      26px;"><span style="font-family: 
+        Arial, Helvetica, sans-serif;">
+15 Users - All goals passed</span></span></p>
+
+
+    <br><br><br><br><br><br><br><br><br>
+<p style="text-align: left;"><span style="font-family: 
+        Arial, Helvetica, sans-serif;"><span style="font-size: 26px;"></span><span style="font-size: 36px; color: rgb(119, 119, 119);"><strong>
+        Slowest Page
+      </strong></span>
+
+<p style="text-align: left;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 26px;">
+The chart below show the slowest pages, as determined by the page duration measured during the test. See the Slowest Pages chart for a more detailed analysis.
+</span></p>
+
+
+  </span></p>
+  <!-- <div class="container"style="position: relative; height:100vh; width:70vw"> -->
+
+
+    <canvas id="SlowestPages1"></canvas>
+    <br><br><br><br><br>
+    <canvas id="SlowestPages2"></canvas>
+    <br><br><br><br><br>
+    <canvas id="SlowestPages3"></canvas>
+    <br><br><br><br><br><br><br><br><br>
+
+
+<p style="text-align: left;"><span style="font-family: 
+    Arial, Helvetica, sans-serif;"><span style="font-size: 36px;"></span><span style="font-size: 36px; color: rgb(119, 119, 119);"><strong>
+    Page Duration
+  </strong></span>
+<p style="text-align: left;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 26px;">
+The Page Duration chart shows the minimum, maximum and average page duration for all pages in the test that completed during the sample periods summarized for each user level. 
+In a well-performing system, the page duration should remain below the required limits up to or beyond the required load (number of users), subject to the performance requirements set forth for the system.
+</span></p>
+
+    <canvas id="PageDuration1"></canvas>
+    <br><br><br><br><br>
+    <canvas id="PageDuration2"></canvas>
+    <br><br><br><br><br>
+    <canvas id="PageDuration3"></canvas>
+    <br><br><br><br><br><br><br><br><br>
+
+
+
+<p style="text-align: left;"><span style="font-family: 
+    Arial, Helvetica, sans-serif;"><span style="font-size: 36px;"></span><span style="font-size: 36px; color: rgb(119, 119, 119);"><strong>
+    Throughput
+  </strong></span>
+<p style="text-align: left;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 26px;">
+Throughput â€“ indicates the number of transactions per second an application can handle, the amount of transactions produced over time during a test. Formula is: Throughput = (number of requests) / (total time)
+</span></p>
+    <canvas id="Throughput1"></canvas>
+    <br><br><br><br><br>
+    <canvas id="Throughput2"></canvas>
+    <br><br><br><br><br>
+    <canvas id="Throughput3"></canvas>
+    <br><br><br><br><br><br><br><br><br>
+
+
+<p style="text-align: left;"><span style="font-family: 
+    Arial, Helvetica, sans-serif;"><span style="font-size: 36px;"></span><span style="font-size: 36px; color: rgb(119, 119, 119);"><strong>
+    Page Completion Rate
+  </strong></span>
+<p style="text-align: left;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 26px;">
+The Page Completion Rate chart shows the total number of pages completed per second during the sample periods summarized for each user level.
+</span></p>
+    <canvas id="PageCopliteRate"></canvas>
+    <br><br><br><br><br><br><br><br><br>
+    
+
+
+<p style="text-align: left;"><span style="font-family: 
+    Arial, Helvetica, sans-serif;"><span style="font-size: 36px;"></span><span style="font-size: 36px; color: rgb(119, 119, 119);"><strong>
+    Failures
+  </strong></span>
+<p style="text-align: left;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 26px;">
+The failures section chart illustrates how the total number of page failures and the page failure rate changed throughout the test relative to the sample periods summarized for each user level. A page can fail for any number of reasons, including failures in the network and servers (web, application or database).
+</span></p>
+    <canvas id="Errors"></canvas>
+    <br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+
+    <!-- <link rel="stylesheet" type="text/css" href="mystyle.css"> -->
+    <style type="text/css">div {
+  height: 20px;
+  width: 50%;
+  background-color: white
+ ;
+}
+body {  
+  background: white;
+  padding: 26px;
+}
+
+canvas {
+  border: 0px dotted red;
+}
+
+.chart-container {
+  position: relative;
+  margin: auto;
+  height: 80vh;
+  width: 80vw;
+}</style>>    
+  </div>
+
+
+  <!-- <script src="reports.js"></script> -->
+  <script type="text/javascript">report = [
+{"Label":"Login","# Samples":"5","Average":"2014","Min":"1449","Max":"2862","Std. Dev.":"563,20","Error %":"0,000%","Throughput":"1,61031","Received KB/sec":"49,10","Sent KB/sec":"0,42","Avg":{" Bytes":"31222,0"}}
+,
+{"Label":"Discussion","# Samples":"5","Average":"9884","Min":"9645","Max":"10268","Std. Dev.":"248,27","Error %":"0,000%","Throughput":"0,45620","Received KB/sec":"9,85","Sent KB/sec":"0,26","Avg":{" Bytes":"22118,2"}}
+,
+{"Label":"Find Properties","# Samples":"5","Average":"1785","Min":"956","Max":"2463","Std. Dev.":"595,65","Error %":"0,000%","Throughput":"2,03004","Received KB/sec":"42,80","Sent KB/sec":"1,30","Avg":{" Bytes":"21587,0"}}
+,
+{"Label":"My properties","# Samples":"5","Average":"1258","Min":"433","Max":"2009","Std. Dev.":"541,12","Error %":"0,000%","Throughput":"1,87406","Received KB/sec":"17,21","Sent KB/sec":"2,39","Avg":{" Bytes":"9403,4"}}
+,
+{"Label":"Offers","# Samples":"5","Average":"904","Min":"594","Max":"1603","Std. Dev.":"374,26","Error %":"0,000%","Throughput":"1,30548","Received KB/sec":"11,99","Sent KB/sec":"1,66","Avg":{" Bytes":"9402,0"}}
+,
+{"Label":"Members","# Samples":"5","Average":"4079","Min":"3433","Max":"4823","Std. Dev.":"472,83","Error %":"0,000%","Throughput":",66138","Received KB/sec":"11,91","Sent KB/sec":"0,41","Avg":{" Bytes":"18442,0"}}
+,
+{"Label":"Groups","# Samples":"5","Average":"1416","Min":"1128","Max":"1883","Std. Dev.":"317,81","Error %":"0,000%","Throughput":",88652","Received KB/sec":"14,50","Sent KB/sec":"0,56","Avg":{" Bytes":"16751,0"}}
+,
+{"Label":"Friends","# Samples":"5","Average":"941","Min":"425","Max":"2267","Std. Dev.":"672,71","Error %":"0,000%","Throughput":",73768","Received KB/sec":"6,77","Sent KB/sec":"0,93","Avg":{" Bytes":"9402,0"}}
+,
+{"Label":"State page","# Samples":"5","Average":"834","Min":"484","Max":"1401","Std. Dev.":"331,64","Error %":"0,000%","Throughput":",67935","Received KB/sec":"10,04","Sent KB/sec":"0,41","Avg":{" Bytes":"15129,0"}}
+,
+{"Label":"City page","# Samples":"5","Average":"841","Min":"491","Max":"1058","Std. Dev.":"233,14","Error %":"0,000%","Throughput":",67889","Received KB/sec":"10,06","Sent KB/sec":"0,42","Avg":{" Bytes":"15168,0"}}
+,
+{"Label":"Property page","# Samples":"5","Average":"12514","Min":"12312","Max":"12942","Std. Dev.":"243,42","Error %":"0,000%","Throughput":"0,26711","Received KB/sec":"3,91","Sent KB/sec":"0,19","Avg":{" Bytes":"14983,0"}}
+,
+{"Label":"TOTAL","# Samples":"55","Average":"3315","Min":"425","Max":"12942","Std. Dev.":"3886,11","Error %":"0,000%","Throughput":"1,36382","Received KB/sec":"22,23","Sent KB/sec":"1,05","Avg":{" Bytes":"16691,6"}}
+
+]
+
+
+
+
+
+
+report2 = 
+[
+{"Label":"Login","# Samples":"10","Average":"1632","Min":"1413","Max":"2516","Std. Dev.":"302,30","Error %":"0,000%","Throughput":"3,67782","Received KB/sec":"112,13","Sent KB/sec":"0,96","Avg":{" Bytes":"31219,8"}}
+,
+{"Label":"Discussion","# Samples":"10","Average":"13931","Min":"13360","Max":"15423","Std. Dev.":"588,91","Error %":"0,000%","Throughput":"0,62909","Received KB/sec":"13,61","Sent KB/sec":"0,36","Avg":{" Bytes":"22151,2"}}
+,
+{"Label":"Find Properties","# Samples":"10","Average":"1226","Min":"940","Max":"2180","Std. Dev.":"396,51","Error %":"0,000%","Throughput":"2,83366","Received KB/sec":"59,78","Sent KB/sec":"1,81","Avg":{" Bytes":"21603,6"}}
+,
+{"Label":"My properties","# Samples":"10","Average":"517","Min":"415","Max":"1156","Std. Dev.":"218,67","Error %":"0,000%","Throughput":"4,13736","Received KB/sec":"37,99","Sent KB/sec":"5,28","Avg":{" Bytes":"9402,0"}}
+,
+{"Label":"Offers","# Samples":"10","Average":"697","Min":"415","Max":"1954","Std. Dev.":"452,93","Error %":"0,000%","Throughput":"4,21585","Received KB/sec":"38,71","Sent KB/sec":"5,35","Avg":{" Bytes":"9402,0"}}
+,
+{"Label":"Members","# Samples":"10","Average":"5324","Min":"4985","Max":"5675","Std. Dev.":"237,43","Error %":"0,000%","Throughput":"1,52765","Received KB/sec":"28,14","Sent KB/sec":"0,95","Avg":{" Bytes":"18861,2"}}
+,
+{"Label":"Groups","# Samples":"10","Average":"1041","Min":"981","Max":"1150","Std. Dev.":"51,90","Error %":"0,000%","Throughput":"4,65333","Received KB/sec":"76,12","Sent KB/sec":"2,93","Avg":{" Bytes":"16750,3"}}
+,
+{"Label":"Friends","# Samples":"10","Average":"490","Min":"417","Max":"591","Std. Dev.":"79,51","Error %":"0,000%","Throughput":"6,90608","Received KB/sec":"63,41","Sent KB/sec":"8,72","Avg":{" Bytes":"9402,0"}}
+,
+{"Label":"State page","# Samples":"10","Average":"525","Min":"448","Max":"1072","Std. Dev.":"182,59","Error %":"0,000%","Throughput":"5,71755","Received KB/sec":"84,46","Sent KB/sec":"3,44","Avg":{" Bytes":"15126,9"}}
+,
+{"Label":"City page","# Samples":"10","Average":"910","Min":"454","Max":"1432","Std. Dev.":"331,66","Error %":"0,000%","Throughput":"4,37828","Received KB/sec":"64,85","Sent KB/sec":"2,68","Avg":{" Bytes":"15168,0"}}
+,
+{"Label":"Property page","# Samples":"10","Average":"12869","Min":"12130","Max":"13710","Std. Dev.":"444,35","Error %":"0,000%","Throughput":"0,67705","Received KB/sec":"9,91","Sent KB/sec":"0,47","Avg":{" Bytes":"14982,3"}}
+,
+{"Label":"TOTAL","# Samples":"110","Average":"3560","Min":"415","Max":"15423","Std. Dev.":"4835,62","Error %":"0,000%","Throughput":"2,71297","Received KB/sec":"44,33","Sent KB/sec":"2,08","Avg":{" Bytes":"16733,6"}}
+
+]
+
+
+report3 = 
+
+[
+{"Label":"Login","# Samples":"15","Average":"1459","Min":"1379","Max":"1847","Std. Dev.":"129,55","Error %":"0,000%","Throughput":"6,13246","Received KB/sec":"186,97","Sent KB/sec":"1,60","Avg":{" Bytes":"31221,1"}}
+,
+{"Label":"Discussion","# Samples":"15","Average":"37532","Min":"37140","Max":"38036","Std. Dev.":"208,81","Error %":"0,000%","Throughput":"0,38971","Received KB/sec":"8,43","Sent KB/sec":"0,22","Avg":{" Bytes":"22158,1"}}
+,
+{"Label":"Find Properties","# Samples":"15","Average":"1094","Min":"906","Max":"1657","Std. Dev.":"244,64","Error %":"0,000%","Throughput":"6,68747","Received KB/sec":"141,10","Sent KB/sec":"4,28","Avg":{" Bytes":"21605,5"}}
+,
+{"Label":"My properties","# Samples":"15","Average":"416","Min":"403","Max":"430","Std. Dev.":"6,61","Error %":"0,000%","Throughput":"13,05483","Received KB/sec":"119,86","Sent KB/sec":"16,68","Avg":{" Bytes":"9402,0"}}
+,
+{"Label":"Offers","# Samples":"15","Average":"523","Min":"410","Max":"960","Std. Dev.":"208,32","Error %":"0,000%","Throughput":"10,12829","Received KB/sec":"92,99","Sent KB/sec":"12,86","Avg":{" Bytes":"9402,0"}}
+,
+{"Label":"Members","# Samples":"15","Average":"7170","Min":"6676","Max":"7667","Std. Dev.":"259,89","Error %":"0,000%","Throughput":"1,87594","Received KB/sec":"34,44","Sent KB/sec":"1,17","Avg":{" Bytes":"18801,1"}}
+,
+{"Label":"Groups","# Samples":"15","Average":"1077","Min":"972","Max":"1678","Std. Dev.":"199,09","Error %":"0,000%","Throughput":"5,51471","Received KB/sec":"90,20","Sent KB/sec":"3,47","Avg":{" Bytes":"16748,7"}}
+,
+{"Label":"Friends","# Samples":"15","Average":"470","Min":"412","Max":"957","Std. Dev.":"136,40","Error %":"0,000%","Throughput":"5,75595","Received KB/sec":"52,85","Sent KB/sec":"7,27","Avg":{" Bytes":"9402,0"}}
+,
+{"Label":"State page","# Samples":"15","Average":"522","Min":"440","Max":"968","Std. Dev.":"171,95","Error %":"0,000%","Throughput":"4,81850","Received KB/sec":"71,19","Sent KB/sec":"2,90","Avg":{" Bytes":"15128,2"}}
+,
+{"Label":"City page","# Samples":"15","Average":"343","Min":"282","Max":"476","Std. Dev.":"70,27","Error %":"0,000%","Throughput":"4,84653","Received KB/sec":"71,78","Sent KB/sec":"2,97","Avg":{" Bytes":"15166,7"}}
+,
+{"Label":"Property page","# Samples":"15","Average":"13710","Min":"12948","Max":"15776","Std. Dev.":"836,73","Error %":"0,000%","Throughput":"0,85975","Received KB/sec":"12,58","Sent KB/sec":"0,60","Avg":{" Bytes":"14982,5"}}
+,
+{"Label":"TOTAL","# Samples":"165","Average":"5847","Min":"282","Max":"38036","Std. Dev.":"10781,00","Error %":"0,000%","Throughput":"2,44390","Received KB/sec":"39,93","Sent KB/sec":"1,88","Avg":{" Bytes":"16728,9"}}
+
+]
+
+
+
+
+</script>>
+
+
+  
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<!-- Slowest pages 5 users -->
+<!-- ############################################################################### -->
+  <script>
+    let SlowestPages1 = document.getElementById('SlowestPages1').getContext('2d');
+
+    // Global Options
+    Chart.defaults.global.defaultFontFamily = 'Arial';
+    Chart.defaults.global.defaultFontSize = 16;
+    Chart.defaults.global.defaultFontColor = '#777';
+
+    let data_a1 = []
+    let data_b1 = []
+
+    function get_array_a1(value) {  
+      for (let i = 0; i < report.length; i++) {
+        if (value == "Average") {
+          x = report[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_a1.push(z);
+        } else if (value == "Min") {
+          x = report[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_a1.push(z);
+        } else if (value == "Max") {
+          x = report[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_a1.push(z);
+        } else {
+          data_a1.push(report[i][value]);
+
+        }
+            
+      }}
+    function get_array_b1(value) {  
+      for (let i = 0; i < report.length; i++) {
+        if (value == "Average") {
+          x = report[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_b1.push(z);
+        } else if (value == "Min") {
+          x = report[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_b1.push(z);
+        } else if (value == "Max") {
+          x = report[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_b1.push(z);
+        } else {
+          data_b1.push(report[i][value]);
+
+        }
+            
+      }}
+
+
+    get_array_a1("Label")
+    get_array_b1("Average")
+
+
+
+    let massPopChart1 = new Chart(SlowestPages1, {
+      type:'horizontalBar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      data:{
+        labels:data_a1,
+        datasets:[{
+          label:'Average duration',
+          data:data_b1,
+          backgroundColor:"rgba(0, 100, 255, 0.2)",
+          borderWidth:0.5,
+          borderColor:'#777',
+                  }]
+      },
+      options:{
+        responsive: true,
+        title:{
+          display:true,
+          text:'5 Users',
+          fontSize:25
+        },
+        tooltips: {
+          mode: 'index',
+          intersect: false,
+        },
+        hover: {
+          mode: 'nearest',
+          intersect: true
+        },
+
+
+        legend:{
+          display:true,
+          position:'bottom',
+          labels:{
+            fontColor:'#777'
+          }
+        },
+        scales: {
+          xAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Sec'
+            }
+          }],
+          yAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Pages'
+            },
+            ticks: {
+              min: 0,
+              max: 100,
+
+              // forces step size to be 5 units
+              stepSize: 5
+            }
+          }]
+        },
+        layout:{
+          padding:{
+            left:0,
+            right:0,
+            bottom:0,
+            top:0
+          }
+        },
+        tooltips:{
+          enabled:true
+        }
+      }
+    });
+  </script>
+
+
+
+<!-- Slowest page 10 users -->
+<!-- ############################################################################### -->
+  <script>
+    let SlowestPages2 = document.getElementById('SlowestPages2').getContext('2d');
+
+    // Global Options
+    Chart.defaults.global.defaultFontFamily = 'Arial';
+    Chart.defaults.global.defaultFontSize = 16;
+    Chart.defaults.global.defaultFontColor = '#777';
+
+    let data_a2 = []
+    let data_b2 = []
+
+    function get_array_a2(value) {  
+      for (let i = 0; i < report2.length; i++) {
+        if (value == "Average") {
+          x = report2[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_a2.push(z);
+        } else if (value == "Min") {
+          x = report2[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_a2.push(z);
+        } else if (value == "Max") {
+          x = report2[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_a2.push(z);
+        } else {
+          data_a2.push(report2[i][value]);
+
+        }
+            
+      }}
+    function get_array_b2(value) {  
+      for (let i = 0; i < report2.length; i++) {
+        if (value == "Average") {
+          x = report2[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_b2.push(z);
+        } else if (value == "Min") {
+          x = report2[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_b2.push(z);
+        } else if (value == "Max") {
+          x = report2[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_b2.push(z);
+        } else {
+          data_b2.push(report2[i][value]);
+
+        }
+            
+      }}
+
+
+    get_array_a2("Label")
+    get_array_b2("Average")
+
+
+    let massPopChart2 = new Chart(SlowestPages2, {
+      type:'horizontalBar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      data:{
+        labels:data_a2,
+        datasets:[{
+          label:'Average duration',
+          data:data_b2,
+          backgroundColor:"rgba(0, 100, 255, 0.2)",
+          borderWidth:0.5,
+          borderColor:'#777',
+                  }]
+      },
+      options:{
+        responsive: true,
+        title:{
+          display:true,
+          text:'10 Users',
+          fontSize:25
+        },
+        tooltips: {
+          mode: 'index',
+          intersect: false,
+        },
+        hover: {
+          mode: 'nearest',
+          intersect: true
+        },
+
+
+        legend:{
+          display:true,
+          position:'bottom',
+          labels:{
+            fontColor:'#777'
+          }
+        },
+        scales: {
+          xAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Sec'
+            }
+          }],
+          yAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Pages'
+            },
+            ticks: {
+              min: 0,
+              max: 100,
+
+              // forces step size to be 5 units
+              stepSize: 5
+            }
+          }]
+        },
+        layout:{
+          padding:{
+            left:0,
+            right:0,
+            bottom:0,
+            top:0
+          }
+        },
+        tooltips:{
+          enabled:true
+        }
+      }
+    });
+  </script>
+
+<!-- Slowest page 15 users -->
+<!-- ############################################################################### -->
+  <script>
+    let SlowestPages3 = document.getElementById('SlowestPages3').getContext('2d');
+
+    // Global Options
+    Chart.defaults.global.defaultFontFamily = 'Arial';
+    Chart.defaults.global.defaultFontSize = 16;
+    Chart.defaults.global.defaultFontColor = '#777';
+
+    let data_a2a = []
+    let data_b2a = []
+
+    function get_array_a2a(value) {  
+      for (let i = 0; i < report3.length; i++) {
+        if (value == "Average") {
+          x = report3[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_a2a.push(z);
+        } else if (value == "Min") {
+          x = report3[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_a2a.push(z);
+        } else if (value == "Max") {
+          x = report3[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_a2a.push(z);
+        } else {
+          data_a2a.push(report3[i][value]);
+
+        }
+            
+      }}
+    function get_array_b2a(value) {  
+      for (let i = 0; i < report3.length; i++) {
+        if (value == "Average") {
+          x = report3[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_b2a.push(z);
+        } else if (value == "Min") {
+          x = report3[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_b2a.push(z);
+        } else if (value == "Max") {
+          x = report3[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_b2a.push(z);
+        } else {
+          data_b2a.push(report3[i][value]);
+
+        }
+            
+      }}
+
+
+    get_array_a2a("Label")
+    get_array_b2a("Average")
+
+
+    let massPopChart2a = new Chart(SlowestPages3, {
+      type:'horizontalBar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      data:{
+        labels:data_a2a,
+        datasets:[{
+          label:'Average duration',
+          data:data_b2a,
+          backgroundColor:"rgba(0, 100, 255, 0.2)",
+          borderWidth:0.5,
+          borderColor:'#777',
+                  }]
+      },
+      options:{
+        responsive: true,
+        title:{
+          display:true,
+          text:'15 Users',
+          fontSize:25
+        },
+        tooltips: {
+          mode: 'index',
+          intersect: false,
+        },
+        hover: {
+          mode: 'nearest',
+          intersect: true
+        },
+
+
+        legend:{
+          display:true,
+          position:'bottom',
+          labels:{
+            fontColor:'#777'
+          }
+        },
+        scales: {
+          xAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Sec'
+            }
+          }],
+          yAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Pages'
+            },
+            ticks: {
+              min: 0,
+              max: 100,
+
+              // forces step size to be 5 units
+              stepSize: 5
+            }
+          }]
+        },
+        layout:{
+          padding:{
+            left:0,
+            right:0,
+            bottom:0,
+            top:0
+          }
+        },
+        tooltips:{
+          enabled:true
+        }
+      }
+    });
+  </script>
+
+
+
+<!-- Page Duration 5 users -->
+<!-- ############################################################################### -->
+  <script>
+    let PageDuration1 = document.getElementById('PageDuration1').getContext('2d');
+
+    // Global Options
+    Chart.defaults.global.defaultFontFamily = 'Arial';
+    Chart.defaults.global.defaultFontSize = 16;
+    Chart.defaults.global.defaultFontColor = '#777';
+
+    let data_a3 = []
+    let data_b3 = []
+
+
+    labelTotal = report[report.length-1]
+    totalMin = labelTotal["Min"].slice(0, -1)/100
+    totalAverage = labelTotal["Average"].slice(0, -1)/100
+    totalMax = labelTotal["Max"].slice(0, -1)/100
+
+    let massPopChart3 = new Chart(PageDuration1, {
+      type:'horizontalBar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      data:{
+        labels:["Min", "Average", "Max"],
+        datasets:[{
+          label:'Duration',
+          data:[totalMin, totalAverage , totalMax],
+          backgroundColor:["rgba(0, 255, 0, 0.2)","rgba(255, 255, 0, 0.2)","rgba(255, 0, 0, 0.2)"],
+          borderWidth:0.5,
+          borderColor:'#777',
+                  }]
+      },
+      options:{
+        responsive: true,
+        title:{
+          display:true,
+          text:'5 Users',
+          fontSize:25
+        },
+        tooltips: {
+          mode: 'index',
+          intersect: false,
+        },
+        hover: {
+          mode: 'nearest',
+          intersect: true
+        },
+
+
+        legend:{
+          display:false,
+          position:'bottom',
+          labels:{
+            fontColor:'#777'
+          }
+        },
+        scales: {
+          xAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Sec'
+            }
+          }],
+          yAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Time'
+            },
+            ticks: {
+              min: 0,
+              max: 100,
+
+              // forces step size to be 5 units
+              stepSize: 5
+            }
+          }]
+        },
+        layout:{
+          padding:{
+            left:0,
+            right:0,
+            bottom:0,
+            top:0
+          }
+        },
+        tooltips:{
+          enabled:true
+        }
+      }
+    });
+  </script>
+
+
+
+<!-- Page Duration 10 users -->
+<!-- ############################################################################### -->
+  <script>
+    let PageDuration2 = document.getElementById('PageDuration2').getContext('2d');
+
+    // Global Options
+    Chart.defaults.global.defaultFontFamily = 'Arial';
+    Chart.defaults.global.defaultFontSize = 16;
+    Chart.defaults.global.defaultFontColor = '#777';
+
+    let data_a4 = []
+    let data_b4 = []
+
+
+    labelTotal2 = report2[report2.length-1]
+    totalMin2 = labelTotal2["Min"].slice(0, -1)/100
+    totalAverage2 = labelTotal2["Average"].slice(0, -1)/100
+    totalMax2 = labelTotal2["Max"].slice(0, -1)/100
+
+    let massPopChart4 = new Chart(PageDuration2, {
+      type:'horizontalBar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      data:{
+        labels:["Min", "Average", "Max"],
+        datasets:[{
+          label:'Duration',
+          data:[totalMin2, totalAverage2 , totalMax2],
+          backgroundColor:["rgba(0, 255, 0, 0.2)","rgba(255, 255, 0, 0.2)","rgba(255, 0, 0, 0.2)"],
+          borderWidth:0.5,
+          borderColor:'#777',
+                  }]
+      },
+      options:{
+        responsive: true,
+        title:{
+          display:true,
+          text:'10 Users',
+          fontSize:25
+        },
+        tooltips: {
+          mode: 'index',
+          intersect: false,
+        },
+        hover: {
+          mode: 'nearest',
+          intersect: true
+        },
+
+
+        legend:{
+          display:false,
+          position:'bottom',
+          labels:{
+            fontColor:'#777'
+          }
+        },
+        scales: {
+          xAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Sec'
+            }
+          }],
+          yAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Time'
+            },
+            ticks: {
+              min: 0,
+              max: 100,
+
+              // forces step size to be 5 units
+              stepSize: 5
+            }
+          }]
+        },
+        layout:{
+          padding:{
+            left:0,
+            right:0,
+            bottom:0,
+            top:0
+          }
+        },
+        tooltips:{
+          enabled:true
+        }
+      }
+    });
+  </script>
+
+
+<!-- Page Duration 15 users -->
+<!-- ############################################################################### -->
+  <script>
+    let PageDuration3 = document.getElementById('PageDuration3').getContext('2d');
+
+    // Global Options
+    Chart.defaults.global.defaultFontFamily = 'Arial';
+    Chart.defaults.global.defaultFontSize = 16;
+    Chart.defaults.global.defaultFontColor = '#777';
+
+    let data_a4a = []
+    let data_b4a = []
+
+
+    labelTotal3 = report3[report3.length-1]
+    totalMin3 = labelTotal3["Min"].slice(0, -1)/100
+    totalAverage3 = labelTotal3["Average"].slice(0, -1)/100
+    totalMax3 = labelTotal3["Max"].slice(0, -1)/100
+
+    let massPopChart4a = new Chart(PageDuration3, {
+      type:'horizontalBar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      data:{
+        labels:["Min", "Average", "Max"],
+        datasets:[{
+          label:'Duration',
+          data:[totalMin2, totalAverage2 , totalMax2],
+          backgroundColor:["rgba(0, 255, 0, 0.2)","rgba(255, 255, 0, 0.2)","rgba(255, 0, 0, 0.2)"],
+          borderWidth:0.5,
+          borderColor:'#777',
+                  }]
+      },
+      options:{
+        responsive: true,
+        title:{
+          display:true,
+          text:'15 Users',
+          fontSize:25
+        },
+        tooltips: {
+          mode: 'index',
+          intersect: false,
+        },
+        hover: {
+          mode: 'nearest',
+          intersect: true
+        },
+
+
+        legend:{
+          display:false,
+          position:'bottom',
+          labels:{
+            fontColor:'#777'
+          }
+        },
+        scales: {
+          xAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Sec'
+            }
+          }],
+          yAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Time'
+            },
+            ticks: {
+              min: 0,
+              max: 100,
+
+              // forces step size to be 5 units
+              stepSize: 5
+            }
+          }]
+        },
+        layout:{
+          padding:{
+            left:0,
+            right:0,
+            bottom:0,
+            top:0
+          }
+        },
+        tooltips:{
+          enabled:true
+        }
+      }
+    });
+  </script>
+
+
+
+
+<!-- Throughput 5 users -->
+<!-- ############################################################################### -->
+  <script>
+    let Throughput1 = document.getElementById('Throughput1').getContext('2d');
+
+    // Global Options
+    Chart.defaults.global.defaultFontFamily = 'Arial';
+    Chart.defaults.global.defaultFontSize = 16;
+    Chart.defaults.global.defaultFontColor = '#777';
+
+    let data_a5 = []
+    let data_b5 = []
+
+    function get_array_a5(value) {  
+      for (let i = 0; i < report.length; i++) {
+        if (value == "Average") {
+          x = report[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_a5.push(z);
+        } else if (value == "Min") {
+          x = report[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_a5.push(z);
+        } else if (value == "Max") {
+          x = report[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_a5.push(z);
+        } else {
+          data_a5.push(report[i][value]);
+
+        }
+            
+      }}
+    function get_array_b5(value) {  
+      for (let i = 0; i < report.length; i++) {
+        if (value == "Average") {
+          x = report[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_b5.push(z);
+        } else if (value == "Min") {
+          x = report[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_b5.push(z);
+        } else if (value == "Max") {
+          x = report[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_b5.push(z);
+        } else if (value == "Throughput") {
+          x = report[i][value];
+          z = x.replace(',', '');
+          data_b5.push(z/100000);
+        } else {
+          data_b5.push(report[i][value]);
+
+        }
+            
+      }}
+
+
+    get_array_a5("Label")
+    get_array_b5("Throughput")
+
+
+    let massPopChart5 = new Chart(Throughput1, {
+      type:'horizontalBar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      data:{
+        labels:data_a5,
+        datasets:[{
+          label:'Throughput = (number of requests) / (total time)',
+          data:data_b5,
+          backgroundColor:"rgba(0, 100, 255, 0.2)",
+          borderWidth:0.5,
+          borderColor:'#777',
+                  }]
+      },
+      options:{
+        responsive: true,
+        title:{
+          display:true,
+          text:'5 Users',
+          fontSize:25
+        },
+        tooltips: {
+          mode: 'index',
+          intersect: false,
+        },
+        hover: {
+          mode: 'nearest',
+          intersect: true
+        },
+
+
+        legend:{
+          display:true,
+          position:'bottom',
+          labels:{
+            fontColor:'#777'
+          }
+        },
+        scales: {
+          xAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Qty'
+            }
+          }],
+          yAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Pages'
+            },
+            ticks: {
+              min: 0,
+              max: 100,
+
+              // forces step size to be 5 units
+              stepSize: 5
+            }
+          }]
+        },
+        layout:{
+          padding:{
+            left:0,
+            right:0,
+            bottom:0,
+            top:0
+          }
+        },
+        tooltips:{
+          enabled:true
+        }
+      }
+    });
+  </script>
+
+
+
+<!-- Throughput 10 users -->
+<!-- ############################################################################### -->
+  <script>
+    let Throughput2 = document.getElementById('Throughput2').getContext('2d');
+
+    // Global Options
+    Chart.defaults.global.defaultFontFamily = 'Arial';
+    Chart.defaults.global.defaultFontSize = 16;
+    Chart.defaults.global.defaultFontColor = '#777';
+
+    let data_a6 = []
+    let data_b6 = []
+
+    function get_array_a6(value) {  
+      for (let i = 0; i < report2.length; i++) {
+        if (value == "Average") {
+          x = report2[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_a6.push(z);
+        } else if (value == "Min") {
+          x = report2[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_a6.push(z);
+        } else if (value == "Max") {
+          x = report2[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_a6.push(z);
+        } else {
+          data_a6.push(report2[i][value]);
+
+        }
+            
+      }}
+    function get_array_b6(value) {  
+      for (let i = 0; i < report2.length; i++) {
+        if (value == "Average") {
+          x = report2[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_b6.push(z);
+        } else if (value == "Min") {
+          x = report2[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_b6.push(z);
+        } else if (value == "Max") {
+          x = report2[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_b6.push(z);
+        } else if (value == "Throughput") {
+          x = report2[i][value];
+          z = x.replace(',', '');
+          data_b6.push(z/100000);
+        } else {
+          data_b6.push(report2[i][value]);
+
+        }
+            
+      }}
+
+
+    get_array_a6("Label")
+    get_array_b6("Throughput")
+
+
+    let massPopChart6 = new Chart(Throughput2, {
+      type:'horizontalBar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      data:{
+        labels:data_a6,
+        datasets:[{
+          label:'Throughput = (number of requests) / (total time)',
+          data:data_b6,
+          backgroundColor:"rgba(0, 100, 255, 0.2)",
+          borderWidth:0.5,
+          borderColor:'#777',
+                  }]
+      },
+      options:{
+        responsive: true,
+        title:{
+          display:true,
+          text:'10 Users',
+          fontSize:25
+        },
+        tooltips: {
+          mode: 'index',
+          intersect: false,
+        },
+        hover: {
+          mode: 'nearest',
+          intersect: true
+        },
+
+
+        legend:{
+          display:true,
+          position:'bottom',
+          labels:{
+            fontColor:'#777'
+          }
+        },
+        scales: {
+          xAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Qty'
+            }
+          }],
+          yAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Pages'
+            },
+            ticks: {
+              min: 0,
+              max: 100,
+
+              // forces step size to be 5 units
+              stepSize: 5
+            }
+          }]
+        },
+        layout:{
+          padding:{
+            left:0,
+            right:0,
+            bottom:0,
+            top:0
+          }
+        },
+        tooltips:{
+          enabled:true
+        }
+      }
+    });
+  </script>
+
+
+<!-- Throughput 15 users -->
+<!-- ############################################################################### -->
+  <script>
+    let Throughput3 = document.getElementById('Throughput3').getContext('2d');
+
+    // Global Options
+    Chart.defaults.global.defaultFontFamily = 'Arial';
+    Chart.defaults.global.defaultFontSize = 16;
+    Chart.defaults.global.defaultFontColor = '#777';
+
+    let data_a6a = []
+    let data_b6a = []
+
+    function get_array_a6a(value) {  
+      for (let i = 0; i < report3.length; i++) {
+        if (value == "Average") {
+          x = report3[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_a6a.push(z);
+        } else if (value == "Min") {
+          x = report3[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_a6a.push(z);
+        } else if (value == "Max") {
+          x = report3[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_a6a.push(z);
+        } else {
+          data_a6a.push(report3[i][value]);
+
+        }
+            
+      }}
+    function get_array_b6a(value) {  
+      for (let i = 0; i < report3.length; i++) {
+        if (value == "Average") {
+          x = report3[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_b6a.push(z);
+        } else if (value == "Min") {
+          x = report3[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_b6a.push(z);
+        } else if (value == "Max") {
+          x = report3[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_b6a.push(z);
+        } else if (value == "Throughput") {
+          x = report3[i][value];
+          z = x.replace(',', '');
+          data_b6a.push(z/100000);
+        } else {
+          data_b6a.push(report3[i][value]);
+
+        }
+            
+      }}
+
+
+    get_array_a6a("Label")
+    get_array_b6a("Throughput")
+
+
+    let massPopChart6a = new Chart(Throughput3, {
+      type:'horizontalBar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      data:{
+        labels:data_a6a,
+        datasets:[{
+          label:'Throughput = (number of requests) / (total time)',
+          data:data_b6a,
+          backgroundColor:"rgba(0, 100, 255, 0.2)",
+          borderWidth:0.5,
+          borderColor:'#777',
+                  }]
+      },
+      options:{
+        responsive: true,
+        title:{
+          display:true,
+          text:'15 Users',
+          fontSize:25
+        },
+        tooltips: {
+          mode: 'index',
+          intersect: false,
+        },
+        hover: {
+          mode: 'nearest',
+          intersect: true
+        },
+
+
+        legend:{
+          display:true,
+          position:'bottom',
+          labels:{
+            fontColor:'#777'
+          }
+        },
+        scales: {
+          xAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Qty'
+            }
+          }],
+          yAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Pages'
+            },
+            ticks: {
+              min: 0,
+              max: 100,
+
+              // forces step size to be 5 units
+              stepSize: 5
+            }
+          }]
+        },
+        layout:{
+          padding:{
+            left:0,
+            right:0,
+            bottom:0,
+            top:0
+          }
+        },
+        tooltips:{
+          enabled:true
+        }
+      }
+    });
+  </script>
+
+
+
+<!-- Page Coplite Rate  -->
+<!-- ############################################################################### -->
+  <script>
+    let PageCopliteRate = document.getElementById('PageCopliteRate').getContext('2d');
+
+    // Global Options
+    Chart.defaults.global.defaultFontFamily = 'Arial';
+    Chart.defaults.global.defaultFontSize = 16;
+    Chart.defaults.global.defaultFontColor = '#777';
+
+    let data_a7 = []
+    let data_b7 = []
+
+    Total5Users = report[report.length-1]
+    Total10Users = report2[report2.length-1]
+    Total15Users = report3[report3.length-1]
+    Average5Users = Total5Users["Average"].slice(0, -1)/10
+    Average10Users = Total10Users["Average"].slice(0, -1)/10
+    Average15Users = Total15Users["Average"].slice(0, -1)/10
+    
+
+
+    let massPopChart7 = new Chart(PageCopliteRate, {
+      type:'line', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      data:{
+        labels:["5 Users", "10 Users","15 Users"],
+        datasets:[{
+          label:'Pages per sec',
+          data:[Average5Users/5,Average10Users/10,Average15Users/15],
+          backgroundColor:"rgba(0, 100, 255, 0.2)",
+          borderWidth:0.5,
+          borderColor:'#777',
+                  }]
+      },
+      options:{
+        responsive: true,
+        title:{
+          display:true,
+          text:'',
+          fontSize:25
+        },
+        tooltips: {
+          mode: 'index',
+          intersect: false,
+        },
+        hover: {
+          mode: 'nearest',
+          intersect: true
+        },
+
+
+        legend:{
+          display:true,
+          position:'bottom',
+          labels:{
+            fontColor:'#777'
+          }
+        },
+        scales: {
+          xAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Users level'
+            }
+          }],
+          yAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Pages quantity'
+            },
+            ticks: {
+              min: 0,
+              max: 100,
+
+              // forces step size to be 5 units
+              stepSize: 5
+            }
+          }]
+        },
+        layout:{
+          padding:{
+            left:0,
+            right:0,
+            bottom:0,
+            top:0
+          }
+        },
+        tooltips:{
+          enabled:true
+        }
+      }
+    });
+  </script>
+
+
+
+<!-- Errors All users -->
+<!-- ############################################################################### -->
+  <script>
+    let Errors = document.getElementById('Errors').getContext('2d');
+
+    // Global Options
+    Chart.defaults.global.defaultFontFamily = 'Arial';
+    Chart.defaults.global.defaultFontSize = 16;
+    Chart.defaults.global.defaultFontColor = '#777';
+
+    let data_a8 = []
+    let data_b8 = []
+
+    function get_array_a8(value) {  
+      for (let i = 0; i < report.length; i++) {
+        if (value == "Average") {
+          x = report[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_a8.push(z);
+        } else if (value == "Min") {
+          x = report[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_a8.push(z);
+        } else if (value == "Max") {
+          x = report[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_a8.push(z);
+        } else {
+          data_a8.push(report[i][value]);
+
+        }
+            
+      }}
+    function get_array_b8(value) {  
+      for (let i = 0; i < report.length; i++) {
+        if (value == "Average") {
+          x = report[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_b8.push(z);
+        } else if (value == "Min") {
+          x = report[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_b8.push(z);
+        } else if (value == "Max") {
+          x = report[i][value];
+          z = x.slice(0, -1);
+          z = z/100;
+          data_b8.push(z);
+        } else {
+          data_b8.push(report[i][value]);
+
+        }
+            
+      }}
+
+
+    get_array_a8("Label")
+    get_array_b8("Error")
+
+
+
+    let massPopChart8 = new Chart(Errors, {
+      type:'horizontalBar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      data:{
+        labels:data_a8,
+        datasets:[{
+          label:'% Error',
+          data:data_b8,
+          backgroundColor:"rgba(0, 100, 255, 0.2)",
+          borderWidth:0.5,
+          borderColor:'#777',
+                  }]
+      },
+      options:{
+        responsive: true,
+        title:{
+          display:true,
+          text:'',
+          fontSize:25
+        },
+        tooltips: {
+          mode: 'index',
+          intersect: false,
+        },
+        hover: {
+          mode: 'nearest',
+          intersect: true
+        },
+
+
+        legend:{
+          display:true,
+          position:'bottom',
+          labels:{
+            fontColor:'#777'
+          }
+        },
+        scales: {
+          xAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: '%'
+            }
+          }],
+          yAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Pages'
+            },
+            ticks: {
+              min: 0,
+              max: 100,
+
+              // forces step size to be 5 units
+              stepSize: 5
+            }
+          }]
+        },
+        layout:{
+          padding:{
+            left:0,
+            right:0,
+            bottom:0,
+            top:0
+          }
+        },
+        tooltips:{
+          enabled:true
+        }
+      }
+    });
+  </script>
+
+
+</body>
+</html>
